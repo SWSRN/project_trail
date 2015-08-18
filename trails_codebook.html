@@ -1,0 +1,53 @@
+<!--
+<H2> Do Trails Increase House Prices? </H2>
+-->
+
+<br>
+<H4>A Shiny application by Tanya Riseman </H4>
+<br>
+
+<H5>Based on “Rail Trails and Property Values: Is There an Association?”</H5>
+<H5>http://www.amstat.org/publications/jse/v23n2/horton.pdf</H5>
+<H5>by Ella Hartenian and Nicholas J. Horton</H5>
+<br>
+
+
+Variable Descriptions: 
+<br>
+
+<ul>
+<li>  <b>acre</b>: number of acres that the property encompasses  </li>     
+<li>  <b>bikescore</b>: bike friendliness (0-100 score, higher scores are better)</li>
+<li>  <b>diff2014</b>:  difference in price between 2014 estimate and adjusted 1998 estimate (in thousands of dollars)  </li>
+<li>  <b>distgroup</b>:  distance is "Closer" (less than or equal to half mile) or "Farther Away" (greater than half a mile) from a trail</li>
+<li>  <b>no_half_baths</b>: number of half baths (no shower or bathtub)   </li>
+<li>  <b>price1998</b>:  Zillow 10 year estimate from 2008 (in thousands of dollars)</li>
+<li>  <b>price2014</b>:  Zillow price estimate from 2014 (in thousands of dollars)</li>
+<li>  <b>squarefeet</b>:   square footage of interior finished space (in thousands of sf)</li>
+<li>  <b>walkscore</b>: walk friendliness (0-100 score, higher scores are better)</li>
+</ul>
+
+
+
+<p> The variable of interest is diff2014. </p>
+
+
+
+<p> In the top section of the shiny application labeled “Remove Outliers”, one can use the slider to remove outlier houses with extremely low or high values of diff2014.  The default values cull four houses.  A density plot of diff2014 for the culled data set is shown on the right. The culled data set is used subsequently. </p>
+
+
+<p> In the bottom, the user can explore various variables from the data set by clicking on the radio buttons. Based on the choice of button, a map on the right updates to show </p>
+<ul>
+<li> location of the houses, in Northampton MA.</li>
+<li> marker color indicating whether the houses are closer (&lt; 0.5 mi) or farther away from a trail entrance.</li>
+<li>The main trail in Northampton runs North-West, where the majority of "closer" red houses lie.</li>
+<li> The size of the dots indicate the relative value of the variable selected.</li>
+<li> The number of houses will be reduced from 104 if the “Remove Outliers” slider has been used.</li>
+</ul>
+
+
+<br>
+
+ <p>Since it can be difficult to judge maps by eye, the middle section shows the mean, median and standard deviation for the data selected, for both closer/farther groups of houses. It also shows the Wilcox test including p-value. When the p-value is less than 0.05, the difference between the closer/farther medians is said to be significant, 19 times out of 20. 
+</p>
+  
